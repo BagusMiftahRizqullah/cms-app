@@ -7,7 +7,7 @@ import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import { useRouter } from 'next/navigation'
 
-
+import Logo from '../../favicon.ico'
 
 
 const SignIn: React.FC = () => {
@@ -27,23 +27,22 @@ const SignIn: React.FC = () => {
               <Link className="mb-5.5 inline-block" href="/">
                 <Image
                   className="hidden dark:block"
-                  src={"/images/logo/logo.svg"}
+                  src={Logo}
                   alt="Logo"
-                  width={176}
-                  height={32}
+                  width={50}
+                  height={50}
                 />
                 <Image
                   className="dark:hidden"
-                  src={"/images/logo/logo-dark.svg"}
+                  src={Logo}
                   alt="Logo"
-                  width={176}
-                  height={32}
+                  width={50}
+                  height={50}
                 />
               </Link>
 
               <p className="2xl:px-20">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                suspendisse.
+              Ready to achieve your goals? Let’s get started!.
               </p>
 
               <span className="mt-15 inline-block">
