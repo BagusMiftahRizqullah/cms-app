@@ -9,6 +9,7 @@ export default function DefaultLayout({
   children: React.ReactNode;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  console.log("children", children);
   return (
     <>
       {/* <!-- ===== Page Wrapper Start ===== --> */}

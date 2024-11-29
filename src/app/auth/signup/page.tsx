@@ -6,17 +6,22 @@ import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import Logo from '../../favicon.ico'
-
+import { AiOutlineUserAdd } from "react-icons/ai";
+import DropdownForm from "@/components/DropDownsForm/DropdownForm";
+import SelectGroupOne from "@/components/SelectGroup/SelectGroupOne";
 
 
 export const metadata: Metadata = {
-  title: "Next.js SignUp Page | TailAdmin - Next.js Dashboard Template",
-  description: "This is Next.js SignUp Page TailAdmin Dashboard Template",
-  // other metadata
+  title: "Next.js Form Layout | TailAdmin - Next.js Dashboard Template",
+  description:
+    "This is Next.js Form Layout page for TailAdmin - Next.js Tailwind CSS Admin Dashboard Template",
 };
 
 const SignUp: React.FC = () => {
+
   return (
+    <DefaultLayout>
+        <Breadcrumb pageName="Create New User" />
     <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
 
     <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
@@ -171,7 +176,7 @@ const SignUp: React.FC = () => {
           <div className="w-full border-stroke dark:border-strokedark xl:w-1/2 xl:border-l-2">
             <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
               <h2 className="mb-9 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
-                Sign Up to Admin Dasboard
+               Create New User
               </h2>
 
               <form>
@@ -240,6 +245,9 @@ const SignUp: React.FC = () => {
                     </span>
                   </div>
                 </div>
+
+
+                <SelectGroupOne label="Role" placeholder="select role" />
 
                 <div className="mb-4">
                   <label className="mb-2.5 block font-medium text-black dark:text-white">
@@ -333,6 +341,7 @@ const SignUp: React.FC = () => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 
