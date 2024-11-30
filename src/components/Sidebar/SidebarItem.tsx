@@ -58,7 +58,7 @@ const SidebarItem = ({ item, pageName, setPageName, sidebarOpen }: any) => {
           
         </Link>
 
-        {item.children && (
+        {item.children && !sidebarOpen && (
           <div
             className={`translate transform overflow-hidden ${
               pageName !== item.label.toLowerCase() && "hidden"

@@ -113,7 +113,7 @@ const Dashboard: React.FC = () => {
         <MapOne />
         <div className="col-span-12 xl:col-span-8">
           <TableOne />
-          <AgGridTable />
+          {/* <AgGridTable /> */}
         </div>
         <ChatCard />
       </div>

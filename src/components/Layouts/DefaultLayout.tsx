@@ -20,7 +20,7 @@ export default function DefaultLayout({
 
         {/* <!-- ===== Content Area Start ===== --> */}
         <div className={`flex flex-1 flex-col ${
-                sidebarOpen ? "w-full lg:ml-25" : " w-full lg:ml-72"
+                sidebarOpen ? "w-full lg:ml-20" : " w-full lg:ml-72"
               }`}>
           {/* <!-- ===== Header Start ===== --> */}
           <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
