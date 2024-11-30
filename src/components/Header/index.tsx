@@ -4,17 +4,37 @@ import DropdownMessage from "./DropdownMessage";
 import DropdownNotification from "./DropdownNotification";
 import DropdownUser from "./DropdownUser";
 import Image from "next/image";
+import { AiOutlineAlignLeft, AiOutlineClose , AiOutlineFullscreen } from 'react-icons/ai';
+import Logo from "../../../public/favicon.ico"
+import DropdownFullscreen from "./DropdownFullscreen";
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
   return (
-    <header className="sticky top-0 z-999 flex w-full bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none">
+    <header className="sticky top-0 z-999 w-full bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none">
       <div className="flex flex-grow items-center justify-between px-4 py-4 shadow-2 md:px-6 2xl:px-11">
+      <button
+            aria-controls="sidebar"
+            onClick={(e) => {
+              e.stopPropagation();
+              props.setSidebarOpen(!props.sidebarOpen);
+            }}
+            className="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark"
+          >
+            {
+              props.sidebarOpen ? (
+                <AiOutlineClose className="text-2xl" />
+              ) : (
+                <AiOutlineAlignLeft className="text-2xl" />
+              )
+            }
+                  
+          </button>
         <div className="flex items-center gap-2 sm:gap-4 lg:hidden">
           {/* <!-- Hamburger Toggle BTN --> */}
-          <button
+          {/* <button
             aria-controls="sidebar"
             onClick={(e) => {
               e.stopPropagation();
@@ -53,19 +73,19 @@ const Header = (props: {
                 ></span>
               </span>
             </span>
-          </button>
+          </button> */}
           {/* <!-- Hamburger Toggle BTN --> */}
 
-          <Link className="block flex-shrink-0 lg:hidden" href="/">
+          {/* <Link className="block flex-shrink-0 lg:hidden" href="/">
             <Image
               width={32}
               height={32}
-              src={"/images/logo/logo-icon.svg"}
+              src={Logo}
               alt="Logo"
             />
-          </Link>
+          </Link> */}
         </div>
-
+      
         <div className="hidden sm:block">
           <form action="https://formbold.com/s/unique_form_id" method="POST">
             <div className="relative">
@@ -92,7 +112,7 @@ const Header = (props: {
                   />
                 </svg>
               </button>
-
+            
               <input
                 type="text"
                 placeholder="Type to search..."
@@ -104,6 +124,7 @@ const Header = (props: {
 
         <div className="flex items-center gap-3 2xsm:gap-7">
           <ul className="flex items-center gap-2 2xsm:gap-4">
+            <DropdownFullscreen />
             {/* <!-- Dark Mode Toggler --> */}
             <DarkModeSwitcher />
             {/* <!-- Dark Mode Toggler --> */}
