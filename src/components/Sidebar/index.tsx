@@ -48,7 +48,7 @@ const menuGroups = [
           </svg>
         ),
         label: "Dashboard",
-        route: "#",
+        route: "/dasboard-admin",
         
       },
       {
@@ -305,17 +305,14 @@ const menuGroups = [
         route: "#",
         children: [
           {  
-            label: "Register User",
-            route: "/auth/signup", 
+            label: "Users",
+            route: "/users", 
           },
           {  
             label: "Drivers",
             route: "/auth/signup", 
           },
-          {  
-            label: "Customers",
-            route: "/auth/signup", 
-          }
+         
         
         ],
       },
@@ -365,8 +362,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
     <ClickOutside onClick={() => setSidebarOpen(false)}>
       <aside
-        className={` fixed z-99999 flex h-screen  flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:translate-x-0 ${
-          sidebarOpen ? "w-25 translate-x-0" : "-translate-x-full w-72.5"
+        className={` fixed   flex h-screen  flex-col bg-black duration-300 ease-linear dark:bg-boxdark lg:translate-x-0 ${
+          sidebarOpen ? "w-28 translate-x-0" : "-translate-x-full w-72.5"
         }`}
       >
         {/* <!-- SIDEBAR HEADER --> */}

@@ -6,7 +6,7 @@ import ChartTwo from "../Charts/ChartTwo";
 import ChatCard from "../Chat/ChatCard";
 import TableOne from "../Tables/TableOne";
 import CardDataStats from "../CardDataStats";
-import AgGridTable from "../Tables/aggrid";
+
 
 const MapOne = dynamic(() => import("@/components/Maps/MapOne"), {
   ssr: false,
@@ -113,7 +113,7 @@ const Dashboard: React.FC = () => {
         <MapOne />
         <div className="col-span-12 xl:col-span-8">
           <TableOne />
-          {/* <AgGridTable /> */}
+       
         </div>
         <ChatCard />
       </div>
